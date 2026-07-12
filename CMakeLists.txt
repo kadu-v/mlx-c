@@ -34,8 +34,10 @@ if(MLX_C_USE_SYSTEM_MLX)
 else()
   FetchContent_Declare(
     mlx
-    GIT_REPOSITORY "https://github.com/ml-explore/mlx.git"
-    GIT_TAG v0.30.6)
+    # kadu-v fork: v0.30.6 + iOS Metal cross-compilation support
+    # (tag v0.30.6-ios-metal.1)
+    GIT_REPOSITORY "https://github.com/kadu-v/mlx.git"
+    GIT_TAG 6d1f0185bfa8237cc8bb3b7cc4144d7fc4fbd6e3)
   FetchContent_MakeAvailable(mlx)
 endif()
 
